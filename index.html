@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/linkora-mark.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content="Linkora-AI" />
+    <meta name="apple-mobile-web-app-title" content="Linkora-AI" />
+    <meta name="description" content="Create, organize, and review daily click activity for your short links with Linkora-AI." />
+    <meta name="theme-color" content="#f7f6fb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Linkora-AI — Short links, thoughtfully managed" />
+    <meta property="og:description" content="Create, organize, and review daily click activity for your short links with Linkora-AI." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Linkora-AI — Short links, thoughtfully managed" />
+    <meta name="twitter:description" content="Create, organize, and review daily click activity for your short links with Linkora-AI." />
+    <title>Linkora-AI — Short links, thoughtfully managed</title>
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("linklytics-theme");
+        const theme = savedTheme === "light" || savedTheme === "dark"
+          ? savedTheme
+          : window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
